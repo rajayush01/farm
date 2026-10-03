@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-parchment text-barn-800 font-body;
+  }
+  body {
+    @apply antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-display text-barn-800;
+  }
+  ::selection {
+    @apply bg-grain/40;
+  }
+  /* visible keyboard focus */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #3C5A3E;
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ledger-style table rules instead of card-in-card nesting */
+.ledger-table th {
+  @apply text-left text-xs font-medium text-barn-400 uppercase tracking-wide pb-2 border-b border-barn-200;
+}
+.ledger-table td {
+  @apply py-2.5 border-b border-barn-100 text-sm text-barn-700;
+}
+.ledger-table tr:last-child td {
+  @apply border-b-0;
+}

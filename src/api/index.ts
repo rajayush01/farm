@@ -1,0 +1,6 @@
+export { farmService } from './services/farmService'
+export { shedService, batchService } from './services/batchService'
+export { feedService } from './services/feedService'
+export { mortalityService, weightService, medicineService } from './services/operationsService'
+export { expenseService, saleService, inventoryService } from './services/financeService'
+export { alertService, analyticsService } from './services/analyticsService'
